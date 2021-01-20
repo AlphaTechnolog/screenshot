@@ -90,3 +90,21 @@ myKeys =
     ("M-s", spawn "/home/YOURUSER/repo/screenshot/screenshot.sh"),
     ]
 ```
+
+## Learning to use it
+
+Using screenshot.sh. Exists two methods.
+The first method... If you mounted on `dwm`, `qtile`, `spectrwm`, or `xmonad`.
+Now you must use the bind specified, in my
+computer is: `M-s` the `Meta` key (in most computers
+is the `Windows Icon` key). If you not use `dwm`, `qtile`, `spectrwm` or `xmonad`.
+Use it using the script, exec this:
+
+```sh
+cd ~/repo/screenshot
+./screenshot.sh # This launch the script!
+```
+
+## Enjoy
+
+Thanks for use screenshot!
