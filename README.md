@@ -14,9 +14,7 @@ To use screenshot, the requirements are:
 To install screenshot, use this:
 
 ```sh
-mkdir -p ~/repo
-cd ~/repo
-git clone https://github.com/AlphaTechnolog/screenshot.git
+curl -sL https://raw.githubusercontent.com/AlphaTechnolog/screenshot/main/install.sh | sudo bash
 ```
 
 ## Mounting on spectrwm
@@ -29,7 +27,7 @@ nvim spectrwm.conf # nvim or nano or vi or vim or gedit or...
 ```
 
 ```conf
-program[screenshot] = /home/YOURUSER/repo/screenshot/screenshot.sh
+program[screenshot] = /usr/bin/screenshot
 bind[screenshot]    = MOD-s # Or your bind
 ```
 
@@ -51,7 +49,7 @@ mod = 'mod4'
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
   # ...
-  ([mod], 's', lazy.spawn("/home/YOURUSER/repo/screenshot/screenshot.sh"))
+  ([mod], 's', lazy.spawn("/usr/bin/screenshot"))
 ]]
 ```
 
@@ -69,7 +67,7 @@ nvim config.h
 #include <X11/XF86keysym.h>
 static Key keys[] = {
   // ...
-  { MODKEY, XK_s, spawn, SHCMD("/home/YOURUSER/repo/screenshot/screenshot.sh") }
+  { MODKEY, XK_s, spawn, SHCMD("/usr/bin/screenshot") }
 };
 ```
 
@@ -87,7 +85,7 @@ myKeys :: [(String, X ())]
 myKeys = 
     [
     -- ...
-    ("M-s", spawn "/home/YOURUSER/repo/screenshot/screenshot.sh"),
+    ("M-s", spawn "/usr/bin/screenshot"),
     ]
 ```
 
@@ -101,8 +99,13 @@ is the `Windows Icon` key). If you not use `dwm`, `qtile`, `spectrwm` or `xmonad
 Use it using the script, exec this:
 
 ```sh
-cd ~/repo/screenshot
-./screenshot.sh # This launch the script!
+screenshot
+```
+
+## Uninstalling
+
+```bash
+curl -sL https://raw.githubusercontent.com/AlphaTechnolog/screenshot/main/uninstall.sh | sudo bash
 ```
 
 ## Enjoy
