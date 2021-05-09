@@ -8,6 +8,7 @@ To use screenshot, the requirements are:
 
 - zenity.
 - scrot
+- import (as import in your PATH)
 
 ## Installing
 
